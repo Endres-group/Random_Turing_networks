@@ -1,5 +1,9 @@
 ## Optimal network size for most robust Turing patterns 
 
+The following repository contains notebooks and scripts for . They were developed by Professor Robert Emdres' group. 
+
+Code organisation: 
+
 ### Repository content
 
 ### Code
