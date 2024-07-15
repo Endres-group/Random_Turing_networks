@@ -6,7 +6,7 @@
 ***
 
 ### Code organisation: 
-- `figure_5.jpynb` - tutorial on how to generate circular scatter plot and corresponding kernel density estimations of eigenvalues in the complex plan with examples
+- `figure_5.jpynb` - tutorial on how to generate circular scatter plot and corresponding kernel density estimations of eigenvalues in the complex plane with examples
 - `figure_6.jpynb` - tutorial on how to generate:
   - a) % of stable random matrices vs radius γ plot
   - b) % of stable random matrices turning unstable with diffusion vs radius γ plot
