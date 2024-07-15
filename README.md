@@ -16,8 +16,5 @@ Code organisation:
 - Relatioinship between network size and stability
 - Surface plots: optimal network size and diffusion parameters
   
-### Figures
-- Figures 1-8
-  
 ---
 [![My Skills](https://skillicons.dev/icons?i=py)](https://skillicons.dev)
