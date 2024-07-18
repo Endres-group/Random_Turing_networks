@@ -22,7 +22,8 @@
 ### Requirements <br>
 
 #### In order to run the Python scripts you need: 
--
+- Python 3.9 or higher
+- Estimated runtime: `figure8_RE_v3.py` - 4 days on 20 CPUs 
 
 ***
 
