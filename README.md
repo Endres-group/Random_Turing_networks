@@ -6,6 +6,9 @@
 ***
 
 ### Code organisation: 
+- `Figure_3_hists.py` - Code to generate the histograms with the beta distributions. Need to modify paths to data.
+- `Figure_4_beehive.py` - Code to generate the swarm/beehive plots in Fig. 4. Need to modify paths to data.
+- `Figure_4_sample.py` - Code to generate the sum of Jacobian element distributions in Fig. 4. Need to modify paths to data.
 - `figure_5.jpynb` - tutorial on how to generate circular scatter plot and corresponding kernel density estimations of eigenvalues in the complex plane with examples
 - `figure_6.jpynb` - tutorial on how to generate:
   - a) % of stable random matrices vs radius γ plot
