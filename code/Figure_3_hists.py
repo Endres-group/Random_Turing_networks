@@ -1,3 +1,6 @@
+# This code is for making the histograms from Figure 3. Only need to change the path to the data below (input_dir).
+# Arguments log_s and beta_only define whether to use a log scale and to plot only the beta distribution fit respectively.
+
 class JacAnalysisClass:
     def __init__(self, input_dir, output_dir):
         self.input_dir = input_dir

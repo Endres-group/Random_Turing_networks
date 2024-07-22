@@ -1,3 +1,4 @@
+# This code is for making the sample sum histograms from Figure 4. Only need to change the path to the data below (input_dir).
 class Jac_Sample_Sum:
     def __init__(self, input_dir, output_dir):
         self.input_dir = input_dir

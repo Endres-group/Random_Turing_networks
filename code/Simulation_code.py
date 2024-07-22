@@ -1,3 +1,12 @@
+# This code is for simulating the data used in Figures 3 and 4.
+# When running from terminal, it has different arguments:
+# -s: number of samples to be used.
+# -t: number of threads to be used.
+# -o: output directory where to save all results.
+# -m: model to be used, either '2-nodeA', '2-nodeB', '3-node'or '4-node'.
+# -j: whether to compute Jacobian and save it.
+# -p: whether to perform a parameter analysis (sensitivity analysis).
+
 # Check for required libraries
 def check_dependencies():
     try:
@@ -97,11 +106,6 @@ class TuringRobustnessClass:
             self.n_dimensions = 2
         if self.model == "3-node":
             self.adjacencymatrix = np.array([[0, -1, 0], [1, 0, -1], [-1, -1, 1]])
-            self.n_dimensions = 3
-
-            # if self.model == '3-nodeB':
-            #     self.adjacencymatrix = np.array(
-            #         [[0, -1, 0], [1, 0, -1], [-1, -1, 1]])
             self.n_dimensions = 3
         if self.model == "4-node":
             self.adjacencymatrix = np.array(

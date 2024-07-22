@@ -1,11 +1,14 @@
 # Optimal network size for most robust Turing patterns 
 
+![Images taken from the paper.](images/git_hub_cover.jpg)
+
 #### This repository contains notebooks and Python scripts used to generate figures 2-8 in the following [paper](). <br>
-#### The code was developed by Dr. Robert Endres' group at Imperial College London. 
+#### The code was developed by Prof. Dr. Robert Endres' group at Imperial College London. 
 
 ***
 
 ### Code organisation: 
+- `Simulation_code.py` - Code to simulate the data. See description in script for different arguments.
 - `Figure_3_hists.py` - Code to generate the histograms with the beta distributions. Need to modify paths to data.
 - `Figure_4_beehive.py` - Code to generate the swarm/beehive plots in Fig. 4. Need to modify paths to data.
 - `Figure_4_sum_dists.py` - Code to generate the sum of Jacobian element distributions in Fig. 4. Need to modify paths to data.
@@ -20,6 +23,7 @@
 - `figure_8.jpynb` - comprehensive explanation of figure8_RE_v3.py
 - `figure8_RE_v3.py` - generates heatmaps of % Turing 1 occurences for different diffusion parameters *D* and network sizes *N*
 
+For details on functionality see the description at the beginning of the script.
 ***
 
 ### Requirements <br>
@@ -31,4 +35,4 @@
 ***
 
 ### Contacts
-Dr. Robert Endres: r.endres@imperial.ac.uk
+Prof. Dr. Robert Endres: r.endres@imperial.ac.uk
