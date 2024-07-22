@@ -3,7 +3,7 @@
 ![Images taken from the paper.](images/git_hub_cover.jpg)
 
 #### This repository contains notebooks and Python scripts used to generate figures 2-8 in the following [paper](). <br>
-#### The code was developed by Dr. Robert Endres' group at Imperial College London. 
+#### The code was developed by Prof. Dr. Robert Endres' group at Imperial College London. 
 
 ***
 
