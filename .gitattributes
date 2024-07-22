@@ -1,1 +1,2 @@
 data/2-Nodes/jac_results_no_turing_total.txt filter=lfs diff=lfs merge=lfs -text
+data/3-Nodes/jac_results_no_turing_total.txt filter=lfs diff=lfs merge=lfs -text
