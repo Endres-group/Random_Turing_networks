@@ -1,4 +1,6 @@
-class JacAnalysisClass:
+# This code is for making the swarm plots from Figure 4. Only need to change the path to the data below (input_dir).
+
+class BeeSwarmPlot:
     def __init__(self):
         self.input_dir_2n = ""
         self.input_dir_3n = ""
@@ -124,26 +126,6 @@ class JacAnalysisClass:
         # Create the 2x1 plot
         fig, axes = plt.subplots(2, 1, figsize=(12, 12))
 
-        # Function to create the violin plot
-        def create_violin_plot(ax, df):
-            sns.violinplot(
-                ax=ax,
-                data=df,
-                palette=[
-                    "tab:blue",
-                    "tab:orange",
-                    "tab:blue",
-                    "tab:orange",
-                    "tab:blue",
-                    "tab:orange",
-                ],
-            )
-            new_labels = ["2 Nodes", "", "3 Nodes", "", "4 Nodes", ""]
-            tick_font = {"labelsize": 20}
-            ax.set_xticks(np.arange(6))
-            ax.set_xticklabels(new_labels, fontsize=20, fontname="Arial")
-            ax.tick_params(axis="y", **tick_font)
-
         def create_violin_plot(ax, df):
             sns.swarmplot(
                 ax=ax,
@@ -180,44 +162,6 @@ class JacAnalysisClass:
         plt.savefig(self.output_dir + "/swarm_plot", bbox_inches="tight")
         plt.clf()
 
-        os.makedirs(self.output_dir, exist_ok=True)
-        tick_font = {"labelsize": 20}
-        fig, axs = plt.subplots(2, 2, figsize=(10, 10))
-        axs[0, 0].boxplot(data1, positions=[1, 2, 4, 5, 7, 8])
-        axs[0, 0].set_title("First moment", fontsize=25)
-        axs[0, 1].boxplot(data2, positions=[1, 2, 4, 5, 7, 8])
-        axs[0, 1].set_title("Second moment", fontsize=25)
-        axs[1, 0].boxplot(data3, positions=[1, 2, 4, 5, 7, 8])
-        axs[1, 0].set_title("Third moment", fontsize=25)
-        axs[1, 1].boxplot(data4, positions=[1, 2, 4, 5, 7, 8])
-        axs[1, 1].set_title("Fourth moment", fontsize=25)
-        axs[0, 0].set_xticklabels(
-            ["T", "NT", "T", "NT", "T", "NT"], fontsize=20, fontname="Arial"
-        )
-        axs[0, 1].set_xticklabels(
-            ["T", "NT", "T", "NT", "T", "NT"], fontsize=20, fontname="Arial"
-        )
-        axs[1, 0].set_xticklabels(
-            ["T", "NT", "T", "NT", "T", "NT"], fontsize=20, fontname="Arial"
-        )
-        axs[1, 1].set_xticklabels(
-            ["T", "NT", "T", "NT", "T", "NT"], fontsize=20, fontname="Arial"
-        )
-        axs[0, 0].tick_params(axis="y", **tick_font)
-        axs[1, 0].tick_params(axis="y", **tick_font)
-        axs[0, 1].tick_params(axis="y", **tick_font)
-        axs[1, 1].tick_params(axis="y", **tick_font)
-        # draw a horizontal line at y=0 for all axis
-        for ax in axs.flatten():
-            ax.axhline(y=0, color="k", linestyle="--")
-
-        plt.subplots_adjust(top=0.85, bottom=0.2, hspace=0.6, wspace=0.4)
-
-        plt.savefig(self.output_dir + "/boxplots_all.pdf", bbox_inches="tight")
-        plt.savefig(self.output_dir + "/boxplots_all", bbox_inches="tight")
-        plt.clf()
-
-
 if __name__ == "__main__":
 
     import numpy as np
@@ -234,8 +178,5 @@ if __name__ == "__main__":
     from scipy.optimize import minimize
     from scipy.stats import levene
 
-    statclass = JacAnalysisClass()
+    statclass = BeeSwarmPlot()
     statclass.box_plots()
-    statclass.jacobian_plot(log_s=True, beta_only=True)
-    statclass.jacobian_plot(log_s=False, beta_only=False)
-    statclass.jacobian_plot(log_s=True, beta_only=False)
