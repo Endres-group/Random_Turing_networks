@@ -80,11 +80,7 @@ def main():
     for i, result in enumerate(pool.imap(process_tuple, dp_list), 1):
         results.append(result)
         if i % 100 == 0 or i == total_tasks:
-            elapsed_time = time.time() - start_time
-            remaining_time = elapsed_time * (total_tasks - i) / i
             print(f'Processed {i}/{total_tasks} tasks... ({(i/total_tasks)*100:.2f}%)')
-            print(f'Elapsed time: {elapsed_time:.2f} seconds')
-            print(f'Estimated remaining time: {remaining_time:.2f} seconds')
 
     pool.close()
     pool.join()
