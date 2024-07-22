@@ -35,4 +35,4 @@ For details on functionality see the description at the beginning of the script.
 ***
 
 ### Contacts
-Dr. Robert Endres: r.endres@imperial.ac.uk
+Prof. Dr. Robert Endres: r.endres@imperial.ac.uk
