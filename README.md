@@ -18,9 +18,9 @@
   - b) % of stable random matrices turning unstable with diffusion vs radius γ plot
   - c) % of Turing instabilities vs raidus γ plot
   - d) % of Turing 1 instabilities vs raidus γ plot
-- `figure_7.jpynb` - comprehensive explanation of figure7_re_v5.py 
+- `figure_7.jpynb` - tutorial-style comprehensive explanation of figure7_re_v5.py 
 - `figure7_re_v5.py` - generates heatmaps of % Turing 1 occurences and corresponding percentage shares plots 
-- `figure_8.jpynb` - comprehensive explanation of figure8_RE_v3.py
+- `figure_8.jpynb` - tutorial-style comprehensive explanation of figure8_RE_v3.py
 - `figure8_RE_v3.py` - generates heatmaps of % Turing 1 occurences for different diffusion parameters *D* and network sizes *N*
 
 For details on functionality see the description at the beginning of the script.
