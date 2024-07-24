@@ -20,8 +20,8 @@
   - d) % of Turing 1 instabilities vs raidus γ plot
 - `figure_7.jpynb` - tutorial-style comprehensive explanation of figure7_re_v5.py 
 - `figure7_re_v5.py` - generates heatmaps of % Turing 1 occurences and corresponding percentage shares plots 
-- `figure_8.jpynb` - tutorial-style comprehensive explanation of figure8_RE_v3.py
-- `figure8_RE_v3.py` - generates heatmaps of % Turing 1 occurences for different diffusion parameters *D* and network sizes *N*
+- `figure_8.jpynb` - tutorial-style comprehensive explanation of figure8_HS_v3.py
+- `figure8_HS_v3.py` - generates heatmaps of % of Turing (all types) and Turing 1 occurences for different diffusion parameters *D* and network sizes *N*
 
 For details on functionality see the description at the beginning of the script.
 ***
@@ -30,7 +30,7 @@ For details on functionality see the description at the beginning of the script.
 
 #### In order to run the Python scripts you need: 
 - Python 3.9 or higher
-- Estimated runtime: `figure8_RE_v3.py` - 4 days on 20 CPUs 
+- Estimated runtime: `figure8_HS_v3.py` - 3 days on 4 CPUs 
 
 ***
 
