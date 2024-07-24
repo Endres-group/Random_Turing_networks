@@ -4,8 +4,6 @@ import os
 from scipy.signal import argrelextrema
 import time
 import multiprocessing
-import matplotlib
-matplotlib.use('Agg')  # Use the Agg backend for rendering plots
 import matplotlib.pyplot as plt
 
 def gen_matrix_F(n, vr):
@@ -97,12 +95,14 @@ def main():
         'Percentage_Turing_1': percent_turing_1,
         'Percentage_Turing': percent_turing
     })
-    df_data.to_csv(os.path.join('./', 'heatmap_fig8.csv'), index=False)
+    output_dir = './'
+    csv_path = os.path.join(output_dir, 'heatmap_simulation.csv')
+    df_data.to_csv(csv_path, index=False)
     total_time = end_time - start_time
     print(f"Total execution time: {total_time:.2f} seconds")
 
     # Plotting
-    data = pd.read_csv('heatmap_fig8.csv')
+    data = pd.read_csv(csv_path)
 
     # Compute log10 of Dx and Dy
     data['log_Dx'] = np.log10(data['Dx'])
@@ -110,6 +110,8 @@ def main():
 
     def plot_heatmap_with_colorbar(data, percentage_column, title, first_panel_title):
         fig, axs = plt.subplots(2, 2, figsize=(15, 15))
+        vmin = data[percentage_column].min()
+        vmax = data[percentage_column].max()
         for i, N in enumerate([2, 3, 5, 50]):
             df_n = data[data['N'] == N]
             per = np.array(df_n[percentage_column])
@@ -122,7 +124,7 @@ def main():
             row, col = divmod(i, 2)
             Y, X = np.meshgrid(np.unique(log_dy), np.unique(log_dx))
             ax = axs[row, col]
-            colormap = ax.pcolormesh(X, Y, percentage, cmap='viridis', shading='auto')
+            colormap = ax.pcolormesh(X, Y, percentage, cmap='viridis', shading='auto', vmin=vmin, vmax=vmax)
             
             if row == 0 and col == 0:
                 ax.set_title(first_panel_title, fontweight='bold', style='italic', fontsize=22)
@@ -142,7 +144,7 @@ def main():
 
         fig.text(0.04, 0.5, r'$log_{10}$$\it{D_{2}}$', va='center', fontsize=28, rotation='vertical', fontweight='bold')
         fig.text(0.51, 0.03, r'$log_{10}$$\it{D_{1}}$', ha='center', fontsize=28, fontweight='bold')
-        plt.savefig(f'/mnt/data/heatmap_{title.lower()}.png')
+        plt.savefig(os.path.join(output_dir, f'heatmap_{title.lower()}.png'))
         plt.show()
 
     # Plot the heatmaps for 'Percentage_Turing_1' and 'Percentage_Turing'
