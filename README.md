@@ -22,6 +22,7 @@
 - `figure7_re_v5.py` - generates heatmaps of % Turing 1 occurences and corresponding percentage shares plots 
 - `figure_8.jpynb` - tutorial-style comprehensive explanation of figure8_HS_v3.py
 - `figure8_HS_v3.py` - generates heatmaps of % of Turing (all types) and Turing 1 occurences for different diffusion parameters *D* and network sizes *N*
+- `SI_eigenvalue_distribution.ipynb` - produces supplementary plots related to the asymptotic and finite-N effects of eigenvalue spectra, including comparison of analytical and numerical eigenvalue spectrum, marginal density, and Turing density analyses.
 
 For details on functionality see the description at the beginning of the script.
 ***
